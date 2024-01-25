@@ -16,17 +16,10 @@
     --lg: 18px;
 }
 
-
-
-
-
 /*CLASE INACTIVE*/
 .inactive{
     display: none;
 }
-
-
-
 
 /*CCS del cuerpo*/
 
@@ -64,7 +57,10 @@ nav{
     display: flex;
     justify-content: space-between;
     padding: 0 22px;
-    box-shadow: 0 10px 10px var(--azul-oscuro);
+
+    border-bottom: 2px solid var(--azul-claro);
+
+    /*box-shadow: 0 10px 10px var(--azul-oscuro);*/
 
 }
 .navbar-left{
@@ -107,8 +103,8 @@ nav{
     top: 2px;
     right: 1px;
 
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
 
     border-radius: 50%;
     background-color: transparent;
@@ -119,8 +115,8 @@ nav{
 
 }
 .flechita img{
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     cursor: pointer;
 }
 .nav-email img{
@@ -131,25 +127,18 @@ nav{
 
 /*Carrito*/
 .added{
-    width: 45px;
+    width: 38px;
     cursor: pointer;
 }
 
 
-
-
-
-
-
 /*Menu desplegable*/
-
 .mobile-menu{
     display: none;
 }
 .mobile-menu .menu1{
     grid-template-rows: auto 1fr auto;
 }
-
 .menu1 a {
     display: inline-block;
     text-decoration: none;
@@ -206,9 +195,6 @@ nav{
 }
 
 
-
-
-
 /*CSS DEL MENU DESKTOP: Aparece al dar click al email*/
 .desktop-menu{
     width: 120px;
@@ -217,11 +203,10 @@ nav{
     border-radius: 8px;
 
     background: var(--azul-medio2);
-    box-shadow: 10px 10px 10px var(--azul-oscuro);
 
     position: absolute;
-    top: 80px;
-    right: 75px;
+    top: 74px;
+    right: 65px;
 }
 .desktop-menu ul{
     list-style: none;
@@ -251,56 +236,42 @@ nav{
 }
 
 
-
-
-/*CSS DEL MENÚ MOBILE: El más largo*/
-
-.mobileMenuWeb li{
-    list-style: none;
-    padding: 4px 0 4px 0;
-}
+/*CSS DEL MENÚ MOBILE: Aparece al dar click en el menú hamburguesa*/
 .mobileMenuWeb a{
-    text-decoration: none;
     color: var(--text-input-field);
     font-weight: bold;
 }
 .mobileMenuWeb{
-    padding: 24px;
+    padding: 24px 24px 24px 8px;
     
 
     background: var(--azul-medio2);
     position: absolute;
-    top: 80px;
+    top: 74px;
     left: 0;
 
-    height: 80%;
-    width: 30%;
+    height: 80vh;
+    width: 25vh;
 
     border: 2px solid var(--azul-claro);
     border-radius: 0px 8px 8px 0px;
 }
-
 .mobileMenuWeb ul{
     padding: 0;
     margin: 24px 0 0;
 }
-
 .mobileMenuWeb ul li{
     margin: 20px;
 }
-
 .mobileMenuWeb ul:first-child{
-    padding-bottom: 40px;
+    padding-bottom: 30px;
 }
-
 .mobileMenuWeb ul:nth-child(2){
-    margin-top: 50px;
+    margin-top: 35px;
 }
-
 .mobileMenuWeb ul:nth-child(1){
     border-bottom: 1px solid var(--azul-claro);
 }
-
 .mobileMenuWeb .email{
     color: var(--azul-claro);
     font-size: var(--sm);
@@ -308,21 +279,201 @@ nav{
 }
 .mobileMenuWeb .sign-up{
     color: var(--very-light-pink);
-    align-items: end;
 }
-
 .mobileMenuWeb ul:last-child{
     position: absolute;
     bottom: 0;
 }
+
+/*CSS DETALLE DEL PRODUCTO: Aparece al dar click al carrito de compras en el nav*/
+ /*Imagenes*/
+
+ .details{ 
+    width: 380PX;
+    padding: 12px 22px 0 22px;
+    position: absolute;
+    top: 74px;
+    right: 0;
+    box-sizing: border-box;
+
+    background-color: var(--azul-medio2);
+    border-radius: 0 0px 0px 20px;
+    border: 2px solid var(--azul-claro);
+}
+.arrow img{
+    width: 25px;
+    height: 25px;
+    top: -10px;
+    cursor: pointer;
+}
+
+/*Container*/
+
+.my-order-content{
+    padding: 0 24px;
+    margin-bottom: 24px;
+    border-radius: 8px;
+}
+/*grid elementos dentro del total*/
+.order{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+}
+.order p:nth-child(1){
+    display: flex;
+    flex-direction: column;
+}
+.order p:nth-child(2){
+    text-align: end;
+    font-weight: bold;
+}
+.order p span:nth-child(1){
+   font-size: var(--md);
+   font-weight: bold;
+}
+.order p span:nth-child(2){
+   font-size: var(--sm);
+   color: var(--white);
+}
+
+/*cards de producto*/
+
+.shopping{
+    display: grid;
+    grid-template-columns: auto 1fr 1fr auto;
+    margin-bottom: 14px;
+    gap: 8px;
+    align-items: center;
+}
+figure img{
+    width: 100px;
+    height: 100px;
+    border: 3px solid var(--very-light-pink);
+}
+.shopping figure{
+    margin: 0;
+}
+.shopping figure img{
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+.shopping p:nth-child(2){
+    color:var(--azul-claro);
+    font-size: var(--sm);
+}
+.shopping p:nth-child(3){
+    font-size: var(--md);
+    font-weight: bold;
+}
+.close{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+ /*Botones*/
+ .primary-button{
+    border-radius: 8px;
+    border: none;
+
+    background-color: var(--azul-oscuro);
+    color: var(--white);
+
+    width: 100%;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--md);
+    font-weight: bold;
+
+    height: 50px;
+
+    cursor: pointer;
+}
+.title{
+    font-size: var(--md);
+    font-weight: bold;
+}
+.title-container{
+    display: flex;
+    margin: 0;
+}
+.title-container img{
+    transform: rotate(180deg);
+    margin-right: 14px;
+}
+
+
+/*CSS DEL SECTION DE PRODUCTOS*/
+.cards-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 240px);
+    gap: 40px;
+
+    place-content: center;
+
+    margin-top: 20px;
+}
+
+.product-card{
+    width: 240px;
+}
+
+.product-card .product{
+    width: 240px;
+    height: 240px;
+
+    border-radius: 20px;
+    object-fit: cover;
+
+    border: 4px solid;
+    border-color: var(--very-light-pink);
+}
+
+.product-card figure{
+    margin: 0;
+}
+
+.product-card figure img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    border: none;
+}
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.info div p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--sm);
+    color: var(--text-input-field);
+
+    margin: 0 0 6px 0;
+}
+
+.info div p:nth-child(2){
+    font-size: var(--sm);
+    color: var(--very-light-pink);
+
+    margin: 0;
+}
+
+
 
 /*Responsive*/
 
 @media (max-width: 720px){
     .menu{
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 35px;
+        height: 35px;
         padding-top: 18px;
     }
     .navbar-left ul{
@@ -338,12 +489,34 @@ nav{
     .desktop-menu{
         display: none;
     }
+     /*Imagenes*/
+    .details{
+        width: 100%;
+        padding: 24px;
+        position: absolute;
+        right: 0;
+        
+        border: 2px solid var(--azul-claro);
+        border-radius: 0;
+    }
+    .cards-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 140px);
+    }
+    
+    .product-card{
+        width: 130px;
+    }
 
+    .product-card .product{
+        width: 130px;
+        height: 130px;
+
+        border-radius: 20px;
+    }
 }
+
 @media (min-width: 721px){
     .mobileMenuWeb{
         display: none;
-    }
-
 }
-
