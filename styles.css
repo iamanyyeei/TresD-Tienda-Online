@@ -131,7 +131,6 @@ nav{
     cursor: pointer;
 }
 
-
 /*Menu desplegable*/
 .mobile-menu{
     display: none;
@@ -157,6 +156,7 @@ nav{
 .menu1 ul li{
     margin-bottom: 20px;
 }
+
 /*Margin My orders*/
 
 .menu1 ul li:nth-child(8){
@@ -289,7 +289,7 @@ nav{
  /*Imagenes*/
 
  .details{ 
-    width: 380PX;
+    width: 380px;
     padding: 12px 22px 0 22px;
     position: absolute;
     top: 74px;
@@ -465,6 +465,97 @@ figure img{
     margin: 0;
 }
 
+/* CSS DEL DETALLE INDIVIDUAL DE PRODUCTO: */
+/* Abre al hacer click en cualqueir imagen */
+
+.individualDetails{
+    width: 360px;
+    padding: 15px 15px 35px 15px;
+    position: absolute;
+    top: 74px;
+    right: 0;
+
+    background-color: var(--azul-medio2);
+    border-radius: 0 0px 0px 20px;
+    border: 2px solid var(--azul-claro);
+}
+.individualDetails .imageProduct{
+    width: 98%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 0 0 20px 20px;
+    border: 3px solid var(--very-light-pink);
+}
+.closeIcon{
+    width: 25px;
+    height: 25px;
+}
+.closeIcon{
+    background: var(--azul-medio1);
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 45px;
+    left: 25px;
+    z-index: 2;
+    padding: 2px;
+    border-radius: 50%;
+}
+.close img:hover{
+    cursor: pointer;
+}
+
+/*Botones*/
+.primary-button{
+    border-radius: 8px;
+    border: none;
+
+    background-color: var(--azul-oscuro);
+    color: var(--white);
+
+    width: 100%;
+
+    font-family: 'Quicksand', sans-serif;
+    font-size: var(--md);
+    font-weight: bold;
+
+    height: 50px;
+
+    cursor: pointer;
+}
+.addtocar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button img{
+    width: 30px;
+    padding: 10px;
+}
+
+/*Descripción*/
+.product-info{
+    margin: 24px 24px 0 24px;
+}
+.product-info p:nth-child(1){
+    font-weight: bold;
+    font-size: var(--md);
+    margin-top: 0;
+    margin-bottom: 6px;
+}
+.product-info p:nth-child(2){
+    color: var(--azul-claro);
+    font-size: var(--sm);
+    margin-top: 1;
+    margin-bottom: 6px;
+}
+.product-info p:nth-child(3){
+    color: var(--azul-claro);
+    font-size: var(--sm);
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
 
 
 /*Responsive*/
@@ -514,7 +605,21 @@ figure img{
 
         border-radius: 20px;
     }
-}
+    .individualDetails{
+        top: 76px;
+        height: 100vh;
+        width: 90vw;
+        padding: 15px 15px 35px 15px;
+        border: 0 0 2px 0 var(--azul-claro);
+    }
+
+    .imageProduct{
+        width: 80%;
+        height: 360px;
+        object-fit: cover;
+        border-radius: 0 0 20px 20px;
+        border: 3px solid var(--very-light-pink);
+    }
 
 @media (min-width: 721px){
     .mobileMenuWeb{
